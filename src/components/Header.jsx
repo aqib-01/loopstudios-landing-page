@@ -45,7 +45,7 @@ const Header = () => {
               className={`mob-menu h-0 fixed z-10 flex inset-0 bg-black overflow-hidden
                md:relative md:!h-full md:bg-transparent md:overflow-visible`}
             >
-              <ul className="wrapper md:w-full md:max-w-none md:flex-row flex flex-col gap-4 gap-6  justify-center">
+              <ul className="wrapper md:w-full md:max-w-none md:flex-row flex flex-col gap-4 md:gap-6  justify-center">
                 <li className="nav-link-li">
                   <a className="nav-link  " href="#">
                     About

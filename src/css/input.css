@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.wrapper {
+  width: 90%;
+  max-width: 1100px;
+  @apply mx-auto;
+}
+body {
+  @apply overflow-x-hidden;
+}
+img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+}
+header {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+.logo-header img {
+  max-width: 100%;
+  width: 130px;
+  @apply xs:w-auto;
+}
+.ham-btn {
+  @apply flex flex-col items-center gap-1.5;
+}
+.ham-btn .bar {
+  background-color: #fff;
+  height: 3px;
+  width: 33px;
+  @apply rounded-full;
+}
+.mob-menu-show {
+  height: 100%;
+  transition: height 0.4s ease-out;
+}
+.mob-menu-hide {
+  height: 0;
+  transition: height 0.3s ease-out;
+}
+.nav-link-li {
+  @apply md:!translate-x-0;
+}
+@media (max-width: 767px) {
+  .nav-link-li {
+    transform: translateX(-130px);
+  }
+}
+
+.nav-link {
+  @apply relative pb-1 text-dark-gray md:text-white 
+  md:text-sm  text-lg uppercase font-alata 
+  hover:text-white active:text-white;
+}
+.nav-link::before {
+  position: absolute;
+  height: 2px;
+  border-radius: 2rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  background-color: #fff;
+  content: "";
+}
+.nav-link:hover::before {
+  transform: scaleX(1);
+}
+.creations div:hover p {
+  @apply text-black;
+}
+.creations div:hover img {
+  @apply opacity-30;
+}

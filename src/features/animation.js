@@ -55,13 +55,14 @@ export const animateMobMenuClose = () => {
     stagger: 0.2,
     x: -130,
     duration: 0.3,
+    ease: "back.in",
   });
 };
 export const animateHeader = () => {
   gsap.from(".logo-header", {
-    x: -300,
+    y: -300,
     duration: 0.6,
-    ease: "expo",
+    ease: "back",
   });
   gsap.from(".ham-btn", {
     x: 200,
@@ -79,8 +80,8 @@ export const animateHeader = () => {
     });
     gsap.from(".immersive-exp", {
       delay: 1.6,
-      duration: .8,
-      opacity: 0,
+      duration: 0.8,
+      scale: 0,
     });
   } else if (window.innerWidth < 768) {
     gsap.from(".immersive-exp", {
